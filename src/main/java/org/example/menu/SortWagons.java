@@ -4,10 +4,10 @@ import org.example.objects.*;
 import java.util.List;
 
 public class SortWagons implements MenuItem {
-    List<Train> trains;
+    Train train;
 
-    public SortWagons(List<Train> trainsArr) {
-        this.trains = trainsArr;
+    public SortWagons(Train train) {
+        this.train = train;
     }
 
     @Override

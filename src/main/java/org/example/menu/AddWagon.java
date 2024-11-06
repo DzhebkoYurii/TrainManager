@@ -5,10 +5,10 @@ import org.example.objects.*;
 import java.util.List;
 
 public class AddWagon implements MenuItem {
-    List<Train> trains;
+    Train train;
 
-    public AddWagon(List<Train> trainsArr) {
-        this.trains = trainsArr;
+    public AddWagon(Train train) {
+        this.train = train;
     }
 
     @Override

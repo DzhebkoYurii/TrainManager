@@ -2,23 +2,20 @@ package org.example;
 import org.example.menu.*;
 import org.example.objects.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Train> trains = new ArrayList<Train>();
-        System.out.println(trains.size());
+    private static Scanner scanner = new Scanner(System.in);
+    private static Train train = new Train();
 
+    public static void main(String[] args) {
         Menu menu = new Menu();
-        menu.addItem(new CreateTrain(trains));
-        menu.addItem(new AddWagon(trains));
-        menu.addItem(new ChangeWagon(trains));
-        menu.addItem(new CountPassengers(trains));
-        menu.addItem(new FindWagon(trains));
-        menu.addItem(new SortWagons(trains));
+        menu.addItem(new CreateTrain(train));
+        menu.addItem(new AddWagon(train));
+        menu.addItem(new ChangeWagon(train));
+        menu.addItem(new CountPassengers(train));
+        menu.addItem(new FindWagon(train));
+        menu.addItem(new SortWagons(train));
 
         int choice;
         do {

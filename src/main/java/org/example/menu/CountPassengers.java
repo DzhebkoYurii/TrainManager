@@ -4,10 +4,10 @@ import org.example.objects.*;
 import java.util.List;
 
 public class CountPassengers implements MenuItem {
-    List<Train> trains;
+    Train train;
 
-    public CountPassengers(List<Train> trainsArr) {
-        this.trains = trainsArr;
+    public CountPassengers(Train train) {
+        this.train = train;
     }
 
     @Override

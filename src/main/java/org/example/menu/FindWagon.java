@@ -4,10 +4,10 @@ import org.example.objects.*;
 import java.util.List;
 
 public class FindWagon implements MenuItem {
-    List<Train> trains;
+    Train train;
 
-    public FindWagon(List<Train> trainsArr) {
-        this.trains = trainsArr;
+    public FindWagon(Train train) {
+        this.train = train;
     }
 
     @Override
