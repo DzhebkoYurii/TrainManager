@@ -1,6 +1,5 @@
 package org.example.objects;
 
-import org.example.menu.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +28,9 @@ public class Train {
         this.ready = false;
     }
 
+    public List<Wagon> getWagons() {
+        return wagons;
+    }
 
     public int getTrainNumber() {
         return trainNumber;
@@ -58,5 +60,9 @@ public class Train {
     @Override
     public String toString() {
         return "Train №" + trainNumber + " route: '" + route + "' has " + wagons.size() + " wagons.";
+    }
+
+    public void addWagon(Wagon wagon){
+        this.wagons.add(wagon);
     }
 }

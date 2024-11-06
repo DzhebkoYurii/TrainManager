@@ -1,7 +1,6 @@
 package org.example.menu;
 import org.example.objects.*;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class CreateTrain implements MenuItem {
@@ -30,12 +29,18 @@ public class CreateTrain implements MenuItem {
 
         train.setTrainNumber(trainNumber);
         train.setRoute(trainName);
-        train.makeReady();
+        if (!train.isReady()){
+            train.makeReady();
+        }
 
         System.out.println("New train: " + train);
 
         System.out.println("Скільки початкових вагонів ви хочете створити: ");
         int wagonsCount = scanner.nextInt();
+        MenuItem command = new AddWagon(train);
+        for (int i = 0; i < wagonsCount; i++){
+            command.execute();
+        }
     }
 
     @Override
