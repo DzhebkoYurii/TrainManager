@@ -1,6 +1,6 @@
 package org.example.objects;
 
-import org.example.menu.MenuItem;
+import org.example.menu.*;
 
 import java.util.ArrayList;
 import java.util.List;
