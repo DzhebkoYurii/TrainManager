@@ -37,19 +37,33 @@ public class Wagon {
     }
 
 
-    public void addPassenger(){
-        this.freePlaces++;
-    }
 
     public void addPassengers(int count){
-        this.freePlaces += count;
-    }
-
-    public void removePassenger(){
-        this.freePlaces--;
+        if (this.freePlaces - count >= 0){
+            this.freePlaces -= count;
+        } else {
+            System.out.println("Немає місця на стількох пасажирів!");
+            System.out.println("Вільних місць: " + freePlaces);
+        }
     }
 
     public void removePassengers(int count){
-        this.freePlaces -= count;
+        if (this.freePlaces + count <= capacity){
+            this.freePlaces += count;
+        } else {
+            System.out.println("Немає стільки пасажирів!");
+            System.out.println("Всього пасажирів: " + (capacity - freePlaces));
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Wagon{" +
+                "рівень комфорту = " + comfortLevel +
+                ", кількість місць = " + capacity +
+                ", вільні місця = " + freePlaces +
+                ", тип вагону = " + wagonType +
+                ", номер вагону = " + wagonNumber +
+                '}';
     }
 }

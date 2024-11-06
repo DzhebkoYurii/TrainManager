@@ -32,6 +32,10 @@ public class Train {
         return wagons;
     }
 
+    public void removeWagon(Wagon wagon) {
+        wagons.remove(wagon);
+    }
+
     public int getTrainNumber() {
         return trainNumber;
     }
