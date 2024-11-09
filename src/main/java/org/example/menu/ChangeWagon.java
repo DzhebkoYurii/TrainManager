@@ -58,15 +58,19 @@ public class ChangeWagon implements MenuItem {
     public void addPassengers(Wagon wagon){
         System.out.print("Скільки пасажирів додати? ");
         int passengers = scanner.nextInt();
-        wagon.addPassengers(passengers);
-        System.out.println("Пасажири додані!");
+        boolean i = wagon.addPassengers(passengers);
+        if (i){
+            System.out.println("Пасажири додані!");
+        }
     }
 
     public void removePassengers(Wagon wagon){
         System.out.print("Скільки пасажирів видалити? ");
         int passengers = scanner.nextInt();
-        wagon.removePassengers(passengers);
-        System.out.println("Пасажирів вилучено!");
+        boolean i = wagon.removePassengers(passengers);
+        if (i){
+            System.out.println("Пасажирів вилучено!");
+        }
     }
 
 

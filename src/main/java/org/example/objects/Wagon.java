@@ -37,22 +37,25 @@ public class Wagon {
     }
 
 
-
-    public void addPassengers(int count){
+    public boolean addPassengers(int count){
         if (this.freePlaces - count >= 0){
             this.freePlaces -= count;
+            return true;
         } else {
             System.out.println("Немає місця на стількох пасажирів!");
             System.out.println("Вільних місць: " + freePlaces);
+            return false;
         }
     }
 
-    public void removePassengers(int count){
+    public boolean removePassengers(int count){
         if (this.freePlaces + count <= capacity){
             this.freePlaces += count;
+            return true;
         } else {
             System.out.println("Немає стільки пасажирів!");
             System.out.println("Всього пасажирів: " + (capacity - freePlaces));
+            return false;
         }
     }
 

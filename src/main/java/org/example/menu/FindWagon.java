@@ -23,17 +23,21 @@ public class FindWagon implements MenuItem {
         System.out.print("Введіть максимальну кількість пасажирів: ");
         int maxPassengers = scanner.nextInt();
 
+        finder_pass(minPassengers, maxPassengers);
+    }
 
-        boolean check = false;
+    public int finder_pass(int minPassengers, int maxPassengers) {
+        int check = 0;
         for (Wagon wagon : train.getWagons()){
-            if (wagon.getCapacity() > minPassengers && wagon.getCapacity() < maxPassengers){
+            if (wagon.getCapacity() >= minPassengers && wagon.getCapacity() <= maxPassengers){
                 System.out.println(wagon);
-                check = true;
+                check++;
             }
         }
-        if (!check){
+        if (check == 0){
             System.out.println("Таких вагонів немає!");
         }
+        return check;
     }
 
     @Override

@@ -38,7 +38,7 @@ public class AddWagon implements MenuItem {
         System.out.println("Wagon added successfully.");
     }
 
-    private int checkWagonNumber(int number){
+    public int checkWagonNumber(int number){
         boolean check = false;
         int newNumber = number;
         for (Wagon wagon : train.getWagons()){
@@ -55,7 +55,7 @@ public class AddWagon implements MenuItem {
         return number;
     }
 
-    private int checkFreePlaces(int capacity, int fullPlaces){
+    public int checkFreePlaces(int capacity, int fullPlaces){
         if (fullPlaces > capacity){
             System.out.println("Кількість пасажирів більша за можливу!!");
             System.out.print("Введіть іншу кількість пасажирів: ");

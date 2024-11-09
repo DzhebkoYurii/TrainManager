@@ -17,17 +17,28 @@ public class CountPassengers implements MenuItem {
             return;
         }
 
-        int totalPassengers = 0;
-
-        for (Wagon wagon : train.getWagons()){
-            totalPassengers += wagon.getCapacity() - wagon.getFreePlaces();
-        }
-
+        int totalPassengers = countGeneral();
         System.out.println("Загальна кількість пасажирів в потязі: " + totalPassengers);
+
         for (Wagon wagon : train.getWagons()){
-            System.out.println("Кількість пасажирів в вагоні №" + wagon.getWagonNumber() + ": " + (wagon.getCapacity() - wagon.getFreePlaces()));
+            System.out.println("Кількість пасажирів в вагоні №" + wagon.getWagonNumber() + ": " + countWagon(wagon));
         }
     }
+
+    public int countGeneral(){
+        int passengers = 0;
+
+        for (Wagon wagon : train.getWagons()){
+            passengers += wagon.getCapacity() - wagon.getFreePlaces();
+        }
+
+        return passengers;
+    }
+
+    public int countWagon(Wagon wagon){
+        return wagon.getCapacity() - wagon.getFreePlaces();
+    }
+
 
     @Override
     public String getName() {

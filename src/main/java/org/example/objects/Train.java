@@ -32,8 +32,13 @@ public class Train {
         return wagons;
     }
 
-    public void removeWagon(Wagon wagon) {
+    public void addWagon(Wagon wagon){
+        this.wagons.add(wagon);
+    }
+
+    public int removeWagon(Wagon wagon) {
         wagons.remove(wagon);
+        return wagons.size();
     }
 
     public int getTrainNumber() {
@@ -64,9 +69,5 @@ public class Train {
     @Override
     public String toString() {
         return "Train №" + trainNumber + " route: '" + route + "' has " + wagons.size() + " wagons.";
-    }
-
-    public void addWagon(Wagon wagon){
-        this.wagons.add(wagon);
     }
 }
