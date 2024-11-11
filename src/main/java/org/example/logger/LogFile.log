@@ -1,0 +1,12 @@
+лист. 11, 2024 11:17:02 ПП org.example.objects.Train <init>
+INFO: Train instance created.
+лист. 11, 2024 11:17:12 ПП org.example.objects.Train setTrainNumber
+INFO: Train number set to: 11
+лист. 11, 2024 11:17:12 ПП org.example.objects.Train setRoute
+INFO: Route set to: qwerty
+лист. 11, 2024 11:17:12 ПП org.example.objects.Train makeReady
+INFO: Train is ready.
+лист. 11, 2024 11:17:18 ПП org.example.objects.Wagon <init>
+INFO: Wagon created: 1
+лист. 11, 2024 11:17:18 ПП org.example.objects.Train addWagon
+INFO: Added wagon: 1
