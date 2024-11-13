@@ -10,3 +10,10 @@ INFO: Train is ready.
 INFO: Wagon created: 1
 лист. 11, 2024 11:17:18 ПП org.example.objects.Train addWagon
 INFO: Added wagon: 1
+лист. 11, 2024 11:34:57 ПП org.example.objects.Train <init>
+INFO: Train instance created.
+лист. 11, 2024 11:34:57 ПП org.example.Main main
+SEVERE: Critical error occurred
+java.lang.RuntimeException: Test critical error - example for email alert.
+	at org.example.Main.main(Main.java:26)
+
